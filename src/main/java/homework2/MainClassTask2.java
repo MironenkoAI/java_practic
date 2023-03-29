@@ -11,10 +11,9 @@ public class MainClassTask2 {
 
     private static void test() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 100; i++) {
-            sb.append("TEST ");
-        }
-        try (PrintWriter pw = new PrintWriter("src/main/resources/output.txt");) {
+        sb.append("TEST ".repeat(100));
+
+        try (PrintWriter pw = new PrintWriter("src/main/resources/output.txt")) {
             pw.print(sb);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
