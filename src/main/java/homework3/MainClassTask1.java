@@ -9,10 +9,11 @@ public class MainClassTask1 {
     }
 
     private static void ex1() {
-        Scanner scan = new Scanner(System.in);
-        System.out.printf("Введите длину списка: ");
-        int size = scan.nextInt();
-        scan.close();
+        int size;
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.print("Введите длину списка: ");
+            size = scan.nextInt();
+        }
 
         List<Integer> numbers = new ArrayList<>();
         Random random = new Random();
