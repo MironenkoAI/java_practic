@@ -32,7 +32,10 @@ public class MainClassTask3 {
                 count = 1;
             }
         }
-        sb.append((list.get(list.size() - 1) + ": ")).append(count).append(".");
+        sb.append(list.get(list.size() - 1))
+                .append(": ")
+                .append(count)
+                .append(".");
         System.out.println(sb);
 
         HashSet<String> UniqueList = new HashSet<>(list);
