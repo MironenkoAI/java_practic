@@ -1,7 +1,6 @@
 package homework3;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
 //ЗАДАЧА 2. Задан целочисленный список ArrayList. Найти минимальное, максимальное и
 // среднее арифметическое из этого списка.
