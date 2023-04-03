@@ -12,13 +12,14 @@ public class MainClassTask4 {
     }
 
     private static void ex4() {
-        List<String> list = new ArrayList<>(Arrays.asList("8", "I", "14", "love", "2", "you", "12", "lol", "10"));
+        List<String> list = new ArrayList<>(Arrays.asList("8", "7", "we", "I", "14", "5", "love", "2", "you", "12", "lol", "10", "3", "5", "hi"));
         System.out.println(list);
 
         for (int i = 0; i < list.size(); i++) {
             try {
                 Integer.parseInt(list.get(i));
                 list.remove(i);
+                i--;
             } catch (NumberFormatException ignored) {
             }
         }
