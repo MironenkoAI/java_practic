@@ -11,7 +11,7 @@ public class MainClassTask2 {
 
     private static void ex2() {
         Scanner scan = new Scanner(System.in);
-        System.out.printf("Введите длину списка: ");
+        System.out.print("Введите длину списка: ");
         int size = scan.nextInt();
         scan.close();
 
@@ -29,10 +29,9 @@ public class MainClassTask2 {
             sum = sum + numbers.get(i);
         }
 
-        double sumAll = sum + numbers.get(numbers.size() - 1);
-        double mean = sumAll / numbers.size();
-        //double mean = (sum + numbers.get(numbers.size() - 1)) / numbers.size();
-          //ПОЧЕМУ округляет до целых, если писать код в одну строку?
+        //чтобы целое сделать дробным, умножить на 1.0 или добавить (double)
+        double mean = 1.0 * (sum + numbers.get(numbers.size() - 1)) / numbers.size();
+        //double mean = (double) (sum + numbers.get(numbers.size() - 1)) / numbers.size();
 
         System.out.println("Среднее арифметическое: " + mean);
     }
